@@ -30,10 +30,24 @@
    <section>
    <h2>Заинтересовались?</h2>
    <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+   <p>Поиск гостиницы в Седоне<p>
+   </section>
    <img src="img/map.png" width="1199" height="594" alt="Карта">
-    <!--Форму сделаю позже-->
-
-  </section>
+    <!--Форма-->
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label for="arrival_date">Дата заезда</label>
+       <input type="date" id="arrival_date" name="arrival_date" value="24 апреля 2017">
+      <br>
+      <label for="departure_date">Дата выезда</label>
+       <input type="date" id="departure_date" name="departure_date" value="4 июля 2017">
+      <br>
+       <label for="amount">Взрослые:</label>
+        <input type="number" min="1" max="5" step="1" id="amount" name="amount" value="2">
+      <label for="children_amount">Дети:</label>
+       <input type="number" min="1" max="5" step="1" id="children_amount" name="children_amount" value="0">
+      <br>
+      <button type="submit">Отправить</button>
+    </form>
   </main>
   <footer>
   <div>
