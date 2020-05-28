@@ -35,17 +35,40 @@
    <img src="img/map.png" width="1199" height="594" alt="Карта">
     <!--Форма-->
     <form action="https://echo.htmlacademy.ru" method="post">
+     <p>
       <label for="arrival_date">Дата заезда</label>
-       <input type="date" id="arrival_date" name="arrival_date" value="24 апреля 2017">
-      <br>
+       <input type="date" id="arrival_date" name="arrival_date" placeholder="24 апреля 2017">
+       <button type="button">
+         <img src="img/calendar.svg" width="21" height="23" alt="Календарь">
+       </button>
+     </p>
+     <p>
       <label for="departure_date">Дата выезда</label>
-       <input type="date" id="departure_date" name="departure_date" value="4 июля 2017">
-      <br>
+       <input type="date" id="departure_date" name="departure_date" placeholder="4 июля 2017">
+       <button type="button">
+         <img src="img/calendar.svg" width="21" height="23" alt="Календарь">
+       </button>
+     </p>
+     <p>
        <label for="amount">Взрослые:</label>
-        <input type="number" min="1" max="5" step="1" id="amount" name="amount" value="2">
+       <button type="button">
+         <img src="img/minus.svg" width="12" height="3" alt="Минус">
+       </button>
+        <input type="number" min="1" max="5" step="1" id="amount" name="amount" placeholder="2">
+        <button type="button">
+          <img src="img/plus.svg" width="11" height="11" alt="Плюс">
+        </button>
+    </p>
+    <p>
       <label for="children_amount">Дети:</label>
-       <input type="number" min="1" max="5" step="1" id="children_amount" name="children_amount" value="0">
-      <br>
+      <button type="button">
+        <img src="img/minus.svg" width="12" height="3" alt="Минус">
+      </button>
+       <input type="number" min="1" max="5" step="1" id="children_amount" name="children_amount" placeholder="0">
+       <button type="button">
+         <img src="img/plus.svg" width="11" height="11" alt="Плюс">
+       </button>
+    </p>
       <button type="submit">Отправить</button>
     </form>
   </main>
