@@ -21,8 +21,30 @@
     <main>
       <h1>Гостиницы</h1> <!-- скрываемый заголовок-->
       <!--<img src="img/background-mountain.png" width="1200" height="217">--><!--фоновое изображение-->
+      <form action="https://echo.htmlacademy.ru/courses" method="post">
+
+        <p>Инфраструктура:</p>
+        <input type="checkbox" name="pool" id="pool-field" checked>
+        <label for="pool-field">Бассейн</label>
+        <input type="checkbox" name="parking" id="parking-field">
+        <label for="parking-field">Парковка</label>
+        <input type="checkbox" name="wi-fi" id="wi-fi-field">
+        <label for="wi-fi-field">Wi-fi</label>
+
+        <p>Тип жилья:</p>
+        <input type="checkbox" name="hotel" id="hotel-field" checked>
+        <label for="hotel-field">Гостиница</label>
+        <input type="checkbox" name="motel" id="motel-field" checked>
+        <label for="motel-field">Мотель</label>
+        <input type="checkbox" name="appartments" id="appartments-field" checked>
+        <label for="appartments-field">Аппартаменты</label>
+
+        <p>Стоимость в сутки(p):</p>
+        <span>от 0</span> <span>до 3000</span>
+        <!--шкала-->
+        <input type="submit" aria-label="Показать" value="Показать">
        <section>
-         <h2>Фильтр отелей</h2>
+         <h2>Фильтр отелей</h2> <!-- скрываемый заголовок-->
          <!--Здесь будет форма фильтра-->
        </section>
          <div>
