@@ -1,0 +1,108 @@
+:root {
+  --colors-white: #FFFFFF;
+  --colors-black: #000000;
+  --colors-black-grey: #333333;
+  --colors-light-blue: #81B3D2;
+  --colors-grey-background: #EEEEEE;
+  --colors-brown: #766357;
+  --colors-light-grey-background: #F2F2F2;
+}
+body {
+  main-width: 1220px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  color: var(--colors-black);
+  text-transform: uppercase;
+  background-color: var(--colors-white);
+  background-image: url("img/background-photo.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+}
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--colors-black);
+  background-color: transparent;
+}
+.main-navigation img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.site-navigation {
+  list-style: none;
+}
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: var(--colors-black); <!-- как посмотреть какой цвет нужен ? -->
+}
+img:nth-child(2) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.introduction h2 {
+color: var(--colors-black);
+font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+text-align: center;
+}
+.introduction p {
+  color: var(--colors-black-grey);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+}
+h4 {
+color: var(--colors-black);
+font-weight: bold;
+font-size: 21px;
+line-height: 21px;
+}
+h4 + p {
+color: var(--colors-black-grey);
+font-weight: normal;
+font-size: 14px;
+line-height: 21px;
+}
+.order h2 {
+color: var(--colors-black);
+font-weight: bold;
+font-size: 30px;
+line-height: 24px;
+text-align: center;
+}
+.order p {
+  color: var(--colors-black);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+.search {
+color: var(--colors-white);
+font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+background-color: var(--colors-brown);
+
+
+}
+.order-item input{
+  color: var(--colors-black);
+  font-size: 14px;
+  line-height: 26px;
+
+}
+
+/*catalog*/
