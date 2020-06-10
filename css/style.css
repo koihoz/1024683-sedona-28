@@ -29,6 +29,7 @@ body {
 
 /* header */
 
+
 .site-navigation {
   list-style: none;
 }
@@ -52,6 +53,9 @@ body {
   opacity: 0.3;
 }
 
+.site-navigation .current-info {
+  color: var(--colors-brown);
+}
 /* main */
 
 .mountains-bg {
@@ -73,23 +77,70 @@ body {
   line-height: 26px;
   text-align: center;
 }
+
+.features-list {
+  list-style: none;
+}
+
 .description-list {
   list-style: none;
 }
-/* это красная зона
-h4 {
+
+.blue-bg {
+  background-color: var(--colors-light-blue);
+}
+.grey-bg {
+  background-color: var(--colors-grey-background);
+}
+ul.white-bg {
+  background-color: var(--colors-white);
+}
+
+.blue-bg h3 {
+  color: var(--colors-white);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.blue-bg p {
+  color: var(--colors-white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.grey-bg h3 {
+  color: var(--colors-black);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.grey-bg p {
+ color: var(--colors-black-gray);
+ font-weight: normal;
+ font-size: 14px;
+ line-height: 21px;
+ text-transform: uppercase;
+}
+
+.white-bg h4 {
 color: var(--colors-black);
 font-weight: bold;
 font-size: 21px;
 line-height: 21px;
 }
-h4 + p {
+.white-bg p {
 color: var(--colors-black-grey);
 font-weight: normal;
 font-size: 14px;
 line-height: 21px;
 }
-*/
+
 .order h2 {
   color: var(--colors-black);
   font-weight: bold;
@@ -107,6 +158,7 @@ line-height: 21px;
   text-align: center;
 }
 .hotel-search {
+  font-family: inherit;
   color: var(--colors-white);
   font-weight: bold;
   font-size: 21px;
@@ -149,6 +201,13 @@ line-height: 21px;
  background-color: var(--colors-white);
 }
 
+input .order-item-data::placeholder {
+  color: var(--colors-black);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
 .search {
   color: var(--colors-white);
   font-weight: bold;
@@ -169,8 +228,8 @@ line-height: 21px;
 
 /* footer */
 
-.phone a,
-.phone p {
+}
+.phone a {
   color: var(--colors-black);
   font-size: 21px;
   line-height: 26px;
@@ -205,8 +264,104 @@ line-height: 21px;
 }
 
 /* catalog */
+
+.site-navigation .current {
+  color: var(--colors-brown);
+}
+
+.mountains-bg-small {
+  background-image: url( "../img/background-catalog.png" );
+  background-color: var(--colors-background);
+}
+
+form .infrastructure,
+form .houses-types,
+form .price {
+  color: var(--colors-white);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+form label {
+  color: var(--colors-white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.mountains-bg-small .show {
+  color: var(--colors-white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.mountains-bg-small .show:hover {
+  color: var(--colors-black);
+  background-color: var(--colors-white);
+}
+/* не получается сделать цифры placeholder белого цвета, а фон прозрачный */
+input .min::placeholder {
+  color: var(--colors-white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div.found {
+  color: var(--colors-black);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+div .sort {
+  color: var(--colors-black);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort-list {
+  list-style: none;
+}
+
+li .sort-list-item-current {
+  color: var(--colors-light-blue);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+li .sort-list-item {
+ color: var(--colors-black-opacity-03);
+ font-weight: normal;
+ font-size: 12px;
+ line-height: 18px;
+ text-decoration: none;
+}
+
+li .sort-list-item:hover {
+ color: var(--colors-light-blue);
+ border-bottom: 1px dotted;
+}
+
+li .sort-list-item:active {
+ color: var(--colors-black);
+}
+
 .hotels-list {
-list-style: none;
+  list-style: none;
 }
 
 .hotels-list .name {
