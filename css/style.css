@@ -228,7 +228,15 @@ input .order-item-data::placeholder {
 
 /* footer */
 
+.hashtag a {
+  color: var(--colors-black);
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
 }
+
 .phone a {
   color: var(--colors-black);
   font-size: 21px;
@@ -305,8 +313,21 @@ form label {
   color: var(--colors-black);
   background-color: var(--colors-white);
 }
-/* не получается сделать цифры placeholder белого цвета, а фон прозрачный */
-input .min::placeholder {
+input.min {
+  background: transparent;
+}
+input.min::placeholder {
+  color: var(--colors-white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+}
+input.max {
+  background: transparent;
+}
+input.max::placeholder {
   color: var(--colors-white);
   font-weight: normal;
   font-size: 14px;
@@ -315,7 +336,7 @@ input .min::placeholder {
   text-transform: uppercase;
 }
 
-div.found {
+.found {
   color: var(--colors-black);
   font-weight: bold;
   font-size: 21px;
@@ -323,7 +344,7 @@ div.found {
   text-transform: uppercase;
 }
 
-div .sort {
+.sort p  {
   color: var(--colors-black);
   font-weight: normal;
   font-size: 12px;
@@ -349,6 +370,7 @@ li .sort-list-item {
  font-size: 12px;
  line-height: 18px;
  text-decoration: none;
+ border-bottom: 1px dotted var(--colors-light-blue);
 }
 
 li .sort-list-item:hover {
