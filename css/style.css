@@ -26,6 +26,31 @@ body {
   text-transform: uppercase;
   background-color: var(--colors-white);
 }
+/* grid */
+
+.page {
+  height: 100%;
+
+}
+.page-body {
+  min-height: 100%;
+  width: 1200px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header-logo {
+  margin: 0 auto;
+}
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* header */
 
