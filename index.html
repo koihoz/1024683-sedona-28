@@ -8,10 +8,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
-  <header class="main-header">
+  <header class="container main-header">
    <nav class="main-navigation">
     <a class="main-header-logo" href="index.html">
-     <img src="img/logo-sedona.svg" width="1200" height="70" alt="city of Sedona"> <!--Считаю это контектом из-за ссылки-->
+     <img src="img/logo-sedona.svg" width="138" height="70" alt="city of Sedona">
    </a>
      <ul class="site-navigation">
        <li class="current-info"><a href="blank.html">Информация</a></li>
@@ -22,7 +22,7 @@
    </nav>
   </header>
   <main class="container">
-   <h1>Город «Седона»</h1> <!-- скрываемый заголовок-->
+   <h1 class="vusually-hidden">Город «Седона»</h1>
   <div class="mountains-bg">
     <img src="img/intro-welcome.svg" width="456" height="350" alt="Логотип Sedona">
   </div>
@@ -86,52 +86,50 @@
    <p class="order-info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
    <button type="button" class="hotel-search">Поиск гостиницы в Седоне</button>
-   <img src="img/map.png" width="1199" height="594" alt="Карта">
-    <!--Форма-->
+
     <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
      <p class="order-item">
       <label for="arrival_date">Дата заезда</label>
        <input class="order-item-data" type="text" id="arrival_date" name="arrival_date" placeholder="24 апреля 2017">
        <button type="button">
-        <span class="visually-hidden">Календарь</span>
+        <span class="visually-hidden"></span>
        </button>
      </p>
      <p class="order-item">
       <label for="departure_date">Дата выезда</label>
        <input class="order-item-data" type="text" id="departure_date" name="departure_date" placeholder="4 июля 2017">
        <button type="button">
-        <span class="visually-hidden">Календарь</span>
+        <span class="visually-hidden"></span>
        </button>
      </p>
      <p class="order-item">
        <label for="amount">Взрослые:</label>
        <button type="button">
-        <span class="visually-hidden">Уменьшить кол-во взрослых</span>
+        <span class="visually-hidden"></span>
        </button>
         <input class="order-item-data" type="number" min="1" max="5" step="1" id="amount" name="amount" placeholder="2">
         <button type="button">
-         <span class="visually-hidden">Увеличить кол-во взрослых</span>
+         <span class="visually-hidden"></span>
         </button>
     </p>
     <p class="order-item">
       <label for="children_amount">Дети:</label>
       <button type="button">
-        <span class="visually-hidden">Уменьшить кол-во детей</span>
+        <span class="visually-hidden"></span>
       </button>
        <input class="order-item-data" type="number" min="1" max="5" step="1" id="children_amount" name="children_amount" placeholder="0">
        <button type="button">
-        <span class="visually-hidden">Увеличить кол-во детей</span>
+        <span class="visually-hidden"></span>
        </button>
     </p>
       <button type="submit" class="search">Найти</button>
     </form>
+    <img src="img/map.png" width="1199" height="594" alt="Карта">
    </section>
   </main>
-  <footer class="page-footer main-footer">
-    <div class="hashtag">
+  <footer class="container page-footer main-footer">
+    <div class="contacts">
       <a href="blank.html">#visitsedona</a>
-    </div>
-    <div class="phone">
       <a href="tel:+74956660166">тел: +7(495)666-01-66</a>
     </div>
 
