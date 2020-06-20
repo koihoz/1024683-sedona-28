@@ -40,6 +40,7 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
+
 }
 .main-header-logo {
   position: absolute;
@@ -67,6 +68,8 @@ body {
 .site-navigation li:nth-child(3) {
   text-align: right;
 }
+
+
 /* header */
 
 
@@ -118,18 +121,51 @@ body {
 
 .features-list {
   list-style: none;
+  padding-left: 0;
+}
+
+.feature-item-name {
+  display:flex;
+}
+.feature-item-name div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .description-list {
   list-style: none;
+  padding-left: inherit;
+
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
 }
 
-.blue-bg {
-  background-color: var(--colors-light-blue);
+.features-list .feature-item:nth-child(2){
+  display: flex;
+}
+.feature-item:nth-child(2) div {
+  order: 2;
+  width: 400px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-item-name345 {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
 }
 .grey-bg {
   background-color: var(--colors-grey-background);
 }
+.blue-bg {
+  background-color: var(--colors-light-blue);
+}
+
 ul.white-bg {
   background-color: var(--colors-white);
 }
@@ -348,8 +384,27 @@ input .order-item-data::placeholder {
 .mountains-bg-small {
   background-image: url( "../img/background-catalog.png" );
   background-color: var(--colors-background);
+
+  display: flex;
 }
 
+.infrastructure-box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 72px;
+}
+.houses-types-box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 119px;
+}
+.price-box {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+  padding-right: 209px;
+}
 form .infrastructure,
 form .houses-types,
 form .price {
@@ -404,24 +459,38 @@ input.max::placeholder {
   text-transform: uppercase;
 }
 
-.found {
+.found-sort {
+  display: flex;
+  align-items: baseline;
+
+}
+
+.found-sort p:first-child {
   color: var(--colors-black);
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+
+
+  background: green;
 }
 
-.sort p  {
+.found-sort p:nth-child(2)  {
   color: var(--colors-black);
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
+
+  background: red;
 }
 
 .sort-list {
+  display: flex;
   list-style: none;
+
+  background: yellow;
 }
 
 li .sort-list-item-current {
