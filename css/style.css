@@ -51,12 +51,15 @@ body {
   width: 1200px;
   margin: 0 auto;
 
+/* header */
+
 }
 .main-header-logo {
   position: absolute;
   top: 0;
   margin-left: 50%;
   left: -69px;
+  z-index: 2;
 }
 
 .site-navigation {
@@ -67,10 +70,14 @@ body {
   padding-left: 0;
 
   width: 1200px;
+
 }
 .site-navigation li {
   width: 300px;
-  text-align: center
+  text-align: center;
+}
+.site-navigation li:nth-child(1) {
+  padding-right: 62px;
 }
 .site-navigation li:nth-child(2) {
   text-align: left;
@@ -78,9 +85,11 @@ body {
 .site-navigation li:nth-child(3) {
   text-align: right;
 }
+.site-navigation li:nth-child(4) {
+  padding-left: 76px;
+}
 
 
-/* header */
 
 
 .site-navigation a {
@@ -108,9 +117,28 @@ body {
 /* main */
 
 .mountains-bg {
+  position:relative;
+
   text-align: center;
   background-image: url( "../img/background-photo.jpg" );
+  width: 1200px;
+  height: 509px;
   background-color: var(--colors-background);
+  padding-top: 79px;
+}
+
+.mountains-bg::after {
+  content:"";
+
+  position: absolute;
+  bottom:0px;
+  left:0px;
+
+  width: 1200px;
+  height: 57px;
+  background-image: url("../img/shape1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .introduction h2 {
@@ -119,6 +147,7 @@ body {
   font-size: 21px;
   line-height: 26px;
   text-align: center;
+  margin-top: 45px;
 
 }
 .introduction p {
@@ -127,6 +156,8 @@ body {
   font-size: 14px;
   line-height: 26px;
   text-align: center;
+  margin-top: 43px;
+  margin-bottom: 50px;
 }
 
 .features-list {
@@ -163,6 +194,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .feature-item-name345 {
@@ -186,14 +218,24 @@ ul.white-bg {
   font-size: 21px;
   line-height: 21px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.blue-bg p {
+.blue-bg p:first-of-type {
   color: var(--colors-white);
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  text-align: center;
+}
+.blue-bg p:nth-of-type(2) {
+  color: var(--colors-white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .grey-bg h3 {
@@ -202,6 +244,9 @@ ul.white-bg {
   font-size: 21px;
   line-height: 21px;
   text-transform: uppercase;
+  margin-top: 47px;
+  margin-bottom: 26px;
+  text-align: center;
 }
 
 .grey-bg p {
@@ -210,6 +255,8 @@ ul.white-bg {
  font-size: 14px;
  line-height: 21px;
  text-transform: uppercase;
+ text-align: center;
+ margin-bottom: 23px;
 }
 
 .white-bg h4 {
@@ -217,12 +264,18 @@ color: var(--colors-black);
 font-weight: bold;
 font-size: 21px;
 line-height: 21px;
+padding-top: 133px;
+margin-bottom: 25px;
+text-align: center;
+
 }
 .white-bg p {
 color: var(--colors-black-grey);
 font-weight: normal;
 font-size: 14px;
 line-height: 21px;
+text-align: center;
+margin-bottom: 82px;
 }
 
 form p {
@@ -232,9 +285,6 @@ form p {
 .order-form {
 display: flex;
 flex-direction: column;
-
-
-
   position: absolute;
   width: 568px;
   height: 395px;
@@ -242,6 +292,7 @@ flex-direction: column;
   left: 50%;
   transform: translateX(-50%);
   padding: 55px;
+  z-index: 2;
 }
 
 .order h2 {
@@ -251,6 +302,8 @@ flex-direction: column;
   line-height: 24px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 90px;
+  margin-bottom: 31px;
 }
 .order p {
   color: var(--colors-black);
@@ -275,6 +328,7 @@ flex-direction: column;
   text-transform: uppercase;
   width: 568px;
   height: 86px;
+  margin-top: 44px;
 }
 
 .hotel-search:hover {
@@ -408,12 +462,26 @@ input.order-item-data::placeholder {
   background-color: var(--colors-darker-blue);
 }
 
+
+
 /* footer */
 
 .page-footer {
   display: grid;
   grid-template-columns: 400px 400px 400px;
+  min-height: 120px;
+
+
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  top:-126px;
+  z-index: 3;
+
 }
+
+
+
 .contacts a {
   display:block;
   text-align: center;
@@ -423,12 +491,14 @@ input.order-item-data::placeholder {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+
 }
 
 .social-media {
   list-style: none;
   display:flex;
   justify-content: center;
+  text-align: center;
 
 }
 .social-media a {
@@ -438,6 +508,7 @@ input.order-item-data::placeholder {
   margin-right: 6px;
   width:46px;
   height:48px;
+  margin-top: 35px;
 }
 .social-media a:hover {
   color: var(--colors-white);
@@ -477,6 +548,8 @@ input.order-item-data::placeholder {
   text-transform: uppercase;
   margin-right: 8px;
 }
+
+
 
 /* catalog */
 
