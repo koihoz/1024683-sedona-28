@@ -172,13 +172,16 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-top: 28px;
+
 }
 
 .description-list {
+  position: relative;
+
   list-style: none;
   padding-left: inherit;
+
 
   display: grid;
   grid-template-columns: 400px 400px 400px;
@@ -192,8 +195,7 @@ body {
   width: 400px;
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-top: 29px;
 
 }
 
@@ -210,6 +212,7 @@ body {
 
 ul.white-bg {
   background-color: var(--colors-white);
+
 }
 
 .blue-bg h3 {
@@ -228,6 +231,8 @@ ul.white-bg {
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 11px;
+  margin-top: 4px;
 }
 .blue-bg p:nth-of-type(2) {
   color: var(--colors-white);
@@ -249,7 +254,7 @@ ul.white-bg {
   text-align: center;
 }
 
-.grey-bg p {
+.grey-bg p:first-of-type {
  color: var(--colors-black-gray);
  font-weight: normal;
  font-size: 14px;
@@ -257,6 +262,16 @@ ul.white-bg {
  text-transform: uppercase;
  text-align: center;
  margin-bottom: 23px;
+}
+
+.grey-bg p:nth-of-type(2) {
+ color: var(--colors-black-gray);
+ font-weight: normal;
+ font-size: 14px;
+ line-height: 21px;
+ text-transform: uppercase;
+ text-align: center;
+ margin-bottom: 55px;
 }
 
 .white-bg h4 {
@@ -269,6 +284,43 @@ margin-bottom: 25px;
 text-align: center;
 
 }
+
+.white-bg h4:first-of-type::before{
+  content: "";
+  position: absolute;
+  left: 162px;
+  top: 60px;
+  background-image: url("../img/house.svg");
+  width: 75px;
+  height: 72px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*
+.white-bg h4:nth-of-type(2)::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  background-image: url("../img/food.svg");
+  width: 75px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.white-bg h4:last-of-type::before{
+  content: "";
+  position: absolute;
+  right: 162px;
+  top: 60px;
+  background-image: url("../img/presents.svg");
+  width: 64px;
+  height: 77px;
+  background-repeat: no-repeat;
+  background-position: center;
+}*/
+
 .white-bg p {
 color: var(--colors-black-grey);
 font-weight: normal;
@@ -278,13 +330,9 @@ text-align: center;
 margin-bottom: 82px;
 }
 
-form p {
-  outline: 5px solid #ff0000;
-
-}
 .order-form {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 568px;
   height: 395px;
@@ -292,9 +340,13 @@ flex-direction: column;
   left: 50%;
   transform: translateX(-50%);
   padding: 55px;
+  padding-top: 44px;
   z-index: 2;
 }
-
+.order-form .adults-and-children {
+  display: flex;
+  justify-content: space-between;
+}
 .order h2 {
   color: var(--colors-black);
   font-weight: bold;
@@ -302,7 +354,7 @@ flex-direction: column;
   line-height: 24px;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 90px;
+  margin-top: 58px;
   margin-bottom: 31px;
 }
 .order p {
@@ -311,7 +363,7 @@ flex-direction: column;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
-  text-align: center;
+  margin-bottom: 21px;
 }
 
 .hotel-search {
@@ -450,6 +502,9 @@ input.order-item-data::placeholder {
   width: 458px;
   height: 58px;
   left: 411px;
+  margin-top: 37px;
+  padding-top: 3px;
+  padding-left: 4px;
 
 }
 
@@ -466,22 +521,24 @@ input.order-item-data::placeholder {
 
 /* footer */
 
+.main-footer {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  top:-126px;
+  z-index: 3;
+}
+
 .page-footer {
   display: grid;
   grid-template-columns: 400px 400px 400px;
   min-height: 120px;
 
 
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.9);
-
-  top:-126px;
-  z-index: 3;
-
 }
-
-
-
+.page-footer .contacts {
+  padding-top:23px;
+  padding-left: 72px;
+}
 .contacts a {
   display:block;
   text-align: center;
@@ -491,6 +548,7 @@ input.order-item-data::placeholder {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+  margin-bottom: 9px;
 
 }
 
@@ -499,6 +557,7 @@ input.order-item-data::placeholder {
   display:flex;
   justify-content: center;
   text-align: center;
+  padding-left: 5px;
 
 }
 .social-media a {
@@ -539,6 +598,8 @@ input.order-item-data::placeholder {
 .website {
   display:flex;
   justify-content: center;
+  padding-top: 34px;
+  padding-right: 73px;
 }
 .website p {
   color: var(--colors-black);
@@ -549,6 +610,9 @@ input.order-item-data::placeholder {
   margin-right: 8px;
 }
 
+.website a {
+  margin-top: 3px;
+}
 
 
 /* catalog */
@@ -560,6 +624,10 @@ input.order-item-data::placeholder {
 .mountains-bg-small {
   background-image: url( "../img/background-catalog.png" );
   background-color: var(--colors-background);
+  width: 1200px;
+  height: 217px;
+  margin-bottom: 30px;
+  margin-top: 16px;
 
   display: flex;
 }
@@ -640,6 +708,9 @@ input.max::placeholder {
   align-items: baseline;
 
   margin-top: 10px;
+  padding-left: 73px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--colors-grey-line);
 
 }
 
@@ -654,9 +725,8 @@ input.max::placeholder {
 
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 47px;
 
-
-  background: green;
 }
 
 .found-sort p:nth-child(2)  {
@@ -670,7 +740,6 @@ input.max::placeholder {
   margin-top: 0;
   margin-bottom: 0;
 
-  background: red;
 }
 
 .sort-list {
@@ -679,9 +748,13 @@ input.max::placeholder {
   align-self: flex-start;
   margin-top: 0;
   margin-bottom: 0;
-
-  background: yellow;
 }
+
+.sort-list + .arrows {
+  margin-left: auto;
+  margin-right: 42px;
+}
+
 
 li .sort-list-item-current {
   color: var(--colors-light-blue);
@@ -689,6 +762,7 @@ li .sort-list-item-current {
   font-size: 12px;
   line-height: 18px;
   text-decoration: none;
+  margin-right: 32px;
 }
 
 li .sort-list-item {
@@ -696,6 +770,7 @@ li .sort-list-item {
  font-weight: normal;
  font-size: 12px;
  line-height: 18px;
+ margin-right: 33px;
  text-decoration: none;
  border-bottom: 1px dotted var(--colors-light-blue);
 }
@@ -718,7 +793,7 @@ li .sort-list-item:active {
   grid-template-columns: 208px 751px 183px;
   grid-column-gap: 29px;
   border-bottom: 1px solid var(--colors-grey-line);
-  padding-top: 30px;
+  padding-top: 11px;
   padding-bottom: 30px;
 
 }
