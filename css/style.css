@@ -15,6 +15,8 @@
   --colors-grey-line: #E5E5E5;
   --colors-sorting-arrows-grey: #CACACA;
   --colors-sorting-arrows-blue: #81B3D2;
+  --colors-grey-logo : #BDBBBC;
+  --colors-grey-calendar : #A9A9A9;
 
   --colors-white-opacity-03: rgba(255, 255, 255, 0.3);
   --colors-black-opacity-03: rgba(0, 0, 0, 0.3);
@@ -418,8 +420,12 @@ margin-right: 16px;
 margin-right: 23px;
 }
 
-.order-item input {
+.order-item .order-item-data{
+  position: relative;
+}
 
+.order-item input {
+  border: none;
   color: var(--colors-black);
   font-size: 14px;
   line-height: 26px;
@@ -457,13 +463,39 @@ margin-right: 23px;
   height: 38px;
 }
 
-.order-item .order-item-data{
-  position: relative;
+
+
+.calendar1 {
+  position:absolute;
+  right:64px;
+  top: 63px;
+  width: 21px;
+  height: 23px;
+  border: none;
+  padding: 0px;
+}
+.calendar2 {
+  position:absolute;
+  right:64px;
+  top: 130px;
+  width: 21px;
+  height: 23px;
+  border: none;
+  padding: 0px;
 }
 
-.calendar:active svg {
-  fill: var(--colors-light-blue);
+.calendar1 svg,
+.calendar2 svg{
+  fill: var(--colors-grey-calendar);
+}
+.calendar1:hover svg,
+.calendar2:hover svg{
+  fill: var(--colors-black);
+}
 
+.calendar1:active svg,
+.calendar2:active svg{
+  fill: var(--colors-light-blue);
 }
 
  /*.order-item:first-of-type .calendar {
@@ -699,9 +731,16 @@ a.youtube {
   margin-top: 11px;
 }
 
-.website a:hover{
-  color: var(--colors-brown);
+.website-logo svg{
+  fill: var(--colors-black);
 }
+.website-logo:hover svg{
+  fill: var(--colors-light-blue);
+}
+.website-logo:active svg{
+  fill: var(--colors-grey-logo);
+}
+
 
 
 /* catalog */
@@ -1012,17 +1051,17 @@ li .sort-list-item:active {
 }
 
 .rating-box {
-  position: relative;
+  display:flex;
+  flex-direction: column;
   padding-top: 72px;
   padding-left: 15px;
 }
 .rating-box .stars {
-  position: absolute;
-    top: 5px;
-    right: 72px;
+  display: block;
+  width: 87px;
+  height:17px;
   background-image: url("../img/star.svg");
-  width: 18px;
-  height: 17px;
-  background-repeat: no-repeat;
+
+  background-repeat: repeat;
   background-position: center;
 }
