@@ -41,12 +41,33 @@
         <input type="checkbox" name="appartments" id="appartments-field" checked>
         <label for="appartments-field">Аппартаменты</label>
        </div>
+
        <div class="price-box">
-        <p class="price">Стоимость в сутки(p):</p>
-        <div>
-         <input class="min" type="text" id="min" placeholder="от 0">
-         <input class="max" type="text" id="max" placeholder="до 3000">
+
+        <fieldset class="filter-item">
+        <legend class="price">Стоимость в сутки(p):</legend>
+        </fieldset>
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+             <div class="bar"></div>
+             <div class="toggle toggle-min"></div>
+             <div class="toggle toggle-max"></div>
+             </div>
+
+          </div>
+          <div class="price-controls">
+            <label class="min">
+              от <input type="text" id="min" name="min" placeholder="от 0">
+            </label>
+            <label class="max">
+              до <input type="text" name="max" class="max" id="max" placeholder="до 3000">
+            </label>
+
+          </div>
+
         </div>
+
         <button class="show" type="submit" aria-label="Показать">Показать</button>
        </div>
       </div>

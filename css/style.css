@@ -1,3 +1,21 @@
+/* <div class="price-box">
+  <p class="price">Стоимость в сутки(p):</p>
+  <div>
+   <input class="min" type="text" id="min" placeholder="от 0">
+   <input class="max" type="text" id="max" placeholder="до 3000">
+  </div>
+  <button class="show" type="submit" aria-label="Показать">Показать</button>
+</div> */
+
+/*
+.price-box {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+  padding-right: 209px;
+} */
+
 :root {
   --colors-white: #FFFFFF;
   --colors-black: #000000;
@@ -20,6 +38,7 @@
 
   --colors-white-opacity-03: rgba(255, 255, 255, 0.3);
   --colors-black-opacity-03: rgba(0, 0, 0, 0.3);
+  --colors-box-shadow-grey: rgba(0, 1, 1, 0.15);
   --colors-background: #374b56;
 }
 body {
@@ -31,6 +50,7 @@ body {
   text-transform: uppercase;
   background-color: var(--colors-white);
 }
+
 
 .visually-hidden {
   position: absolute;
@@ -55,9 +75,10 @@ body {
   width: 1200px;
   margin: 0 auto;
 
+}
+
 /* header */
 
-}
 .main-header-logo {
   position: absolute;
   top: 0;
@@ -346,6 +367,7 @@ margin-bottom: 82px;
   padding: 55px;
   padding-top: 44px;
   z-index: 2;
+  box-shadow: 0px 7px 15px var(--colors-box-shadow-grey);
 }
 .order-form .adults-and-children {
   display: flex;
@@ -475,6 +497,7 @@ margin-right: 23px;
   height: 23px;
   border: none;
   padding: 0px;
+  background: none;
 }
 .calendar2 {
   position:absolute;
@@ -484,6 +507,7 @@ margin-right: 23px;
   height: 23px;
   border: none;
   padding: 0px;
+  background: none;
 }
 
 .calendar1 svg,
@@ -519,6 +543,7 @@ left: 125px;
 padding: 0px;
 border: none;
 z-index: 10;
+background: none;
 }
 
 .order-item .more1 {
@@ -527,6 +552,7 @@ top: 14px;
 right: 14px;
 padding: 0px;
 border: none;
+background: none;
 }
 
 .order-item .less2 {
@@ -537,6 +563,7 @@ left: 79px;
 padding: 0px;
 border: none;
 z-index: 10;
+background: none;
 }
 
 .order-item .more2 {
@@ -545,6 +572,7 @@ top: 14px;
 right: 13px;
 padding: 0px;
 border: none;
+background: none;
 }
 
 .less1 svg,
@@ -814,13 +842,61 @@ a.youtube {
   flex-direction: column;
   padding-left: 119px;
 }
-.price-box {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: flex-end;
-  padding-right: 209px;
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  height: 50px;
+  position: relative;
+}
+
+.range-controls .scale {
+  width: 316px;
+  height: 2px;
+  background: var(--colors-white-opacity-03);
+  z-index: 100;
+}
+.range-controls .bar {
+  width: 248px;
+  height: 2px;
+  background: var(--colors-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
 form .infrastructure,
 form .houses-types,
 form .price {
