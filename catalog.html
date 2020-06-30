@@ -8,7 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
     <body class="page-body">
-    <header class="container main-header">
+      <div class="container">
+    <header class="main-header">
      <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
        <img src="img/logo-sedona.svg" width="138" height="70" alt="city of Sedona">
@@ -21,32 +22,43 @@
        </ul>
      </nav>
     </header>
-    <main class="container" >
+    <main class="main-container" >
       <h1 class="visually-hidden">Гостиницы</h1> <!-- скрываемый заголовок-->
 
      <form action="https://echo.htmlacademy.ru/courses" method="post">
       <div class="mountains-bg-small">
        <div class="infrastructure-box">
         <p class="infrastructure">Инфраструктура:</p>
-        <label for="pool-field"><input type="checkbox" name="pool" id="pool-field" checked>Бассейн</label>
-        <label for="parking-field"><input type="checkbox" name="parking" id="parking-field">Парковка</label>
-        <label for="wi-fi-field"><input type="checkbox" name="wi-fi" id="wi-fi-field">Wi-fi</label>
+        <input class="visually-hidden" type="checkbox" name="pool" id="pool-field" checked>
+        <label class="infrastructure-item" for="pool-field">Бассейн</label>
+        <input class="visually-hidden" type="checkbox" name="parking" id="parking-field">
+        <label class="infrastructure-item" for="parking-field">Парковка</label>
+        <input class="visually-hidden" type="checkbox" name="wi-fi" id="wi-fi-field">
+        <label class="infrastructure-item" for="wi-fi-field">Wi-fi</label>
        </div>
        <div class="houses-types-box">
         <p class="houses-types">Тип жилья:</p>
-        <input type="checkbox" name="hotel" id="hotel-field" checked>
-        <label for="hotel-field">Гостиница</label>
-        <input type="checkbox" name="motel" id="motel-field" checked>
-        <label for="motel-field">Мотель</label>
-        <input type="checkbox" name="appartments" id="appartments-field" checked>
-        <label for="appartments-field">Аппартаменты</label>
+        <input class="visually-hidden" type="checkbox" name="hotel" id="hotel-field" checked>
+        <label class="houses-item" for="hotel-field">Гостиница</label>
+        <input class="visually-hidden" type="checkbox" name="motel" id="motel-field" checked>
+        <label class="houses-item" for="motel-field">Мотель</label>
+        <input class="visually-hidden" type="checkbox" name="appartments" id="appartments-field" checked>
+        <label class="houses-item" for="appartments-field">Апартаменты</label>
        </div>
 
        <div class="price-box">
 
         <fieldset class="filter-item">
-        <legend class="price">Стоимость в сутки(p):</legend>
+        <legend class="price">Стоимость в сутки (p):</legend>
         </fieldset>
+        <div class="price-controls">
+          <label class="min">
+          <input type="text" class="min" id="min" name="min" placeholder="от 0">
+          </label>
+          <label class="max">
+          <input type="text" name="max" class="max" id="max" placeholder="до 3000">
+          </label>
+          </div>
         <div class="range-filter">
           <div class="range-controls">
             <div class="scale">
@@ -54,22 +66,14 @@
              <div class="toggle toggle-min"></div>
              <div class="toggle toggle-max"></div>
              </div>
-
           </div>
-          <div class="price-controls">
-            <label class="min">
-              от <input type="text" id="min" name="min" placeholder="от 0">
-            </label>
-            <label class="max">
-              до <input type="text" name="max" class="max" id="max" placeholder="до 3000">
-            </label>
-
-          </div>
-
-        </div>
-
+         </div>
         <button class="show" type="submit" aria-label="Показать">Показать</button>
        </div>
+
+
+
+
       </div>
      </form>
 
@@ -96,7 +100,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
              <path d="M5.5 0L0 10h11z"/>
             </svg></a>
-          <a class="sorting-down" href="" aria-label="уменьшение">
+          <a class="sorting-down sorting-down-current" href="" aria-label="уменьшение">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
               <path d="M5.5 10L0 0h11"/>
             </svg></a>
@@ -148,7 +152,7 @@
       </ul>
 
     </main>
-    <footer class="container page-footer">
+    <footer class="page-footer">
       <div class="contacts">
         <a href="blank.html">#visitsedona</a>
         <a href="tel:+74956660166">тел: +7(495) 666-01-66</a>
@@ -181,5 +185,6 @@
        </a>
     </div>
     </footer>
+   </div>
     </body>
   </html>

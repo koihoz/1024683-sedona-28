@@ -8,12 +8,7 @@
 </div> */
 
 /*
-.price-box {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: flex-end;
-  padding-right: 209px;
+
 } */
 
 :root {
@@ -74,7 +69,7 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
-
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 /* header */
@@ -95,7 +90,8 @@ body {
   padding-left: 0;
 
   width: 1200px;
-
+  margin-top: 0;
+  padding-top: 14px;
 }
 .site-navigation li {
   width: 300px;
@@ -409,6 +405,7 @@ margin-bottom: 82px;
   width: 568px;
   height: 86px;
   margin-top: 44px;
+  border: none;
 }
 
 .hotel-search:hover {
@@ -454,7 +451,7 @@ margin-right: 23px;
   font-weight: bold;
   text-transform: uppercase;
   background-color: var(--colors-light-grey-background);
-  padding-left: 10px;
+  padding-left: 12px;
 
   width: 345px;
   height: 38px;
@@ -468,12 +465,17 @@ margin-right: 23px;
  background-color: var(--colors-white);
  border: 2px solid var(--colors-grey-line);
  box-sizing: border-box;
+
+}
+.order-item .order-item-date:focus {
+  padding-left: 10px;
 }
 
 .order-item .order-amount-adults {
 
   padding-left: 0px;
   padding-right: 0px;
+  padding-top: 2px;
   text-align: center;
   width: 114px;
   height: 38px;
@@ -482,6 +484,7 @@ margin-right: 23px;
 .order-item .order-amount-children {
   padding-left: 0px;
   padding-right: 0px;
+  padding-top: 2px;
   text-align: center;
   width: 114px;
   height: 38px;
@@ -666,7 +669,7 @@ input.order-item-data::placeholder {
 .main-footer {
   position: relative;
   background-color: rgba(255, 255, 255, 0.9);
-  top:-126px;
+  margin-top: -120px;
   z-index: 3;
 }
 
@@ -836,21 +839,56 @@ a.youtube {
   display: flex;
   flex-direction: column;
   padding-left: 72px;
+  padding-top: 10px;
 }
 .houses-types-box {
   display: flex;
   flex-direction: column;
   padding-left: 119px;
+  padding-top: 10px;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+
+}
+.price-controls {
+border: 2px solid var(--colors-white);
+box-sizing: border-box;
+border-radius: 2px;
+width: 317px;
+height: 36px;
+margin-top: 10px;
+margin-right: 73px;
+padding-top: 5px;
+padding-left: 50px;
+
+}
+
+button.show {
+  width: 137px;
+  height: 36px;
+  border: 2px solid var(--colors-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin-right: 168px;
+  margin-top: 25px;
 }
 
 .filter-item {
   margin: 0;
   padding: 0;
   border: none;
+  margin-top: 27px;
+
 }
 .range-filter {
   width: 260px;
-  margin-top: 49px;
+  margin-top: 20px;
+  margin-right: 129px;
 }
 
 .filter-item legend {
@@ -858,10 +896,12 @@ a.youtube {
   line-height: 21px;
   text-transform: uppercase;
   font-weight: 700;
+  margin-right: 209px;
 }
 
 .range-controls {
-  height: 50px;
+  width: 316px;
+  height: 10px;
   position: relative;
 }
 
@@ -872,29 +912,29 @@ a.youtube {
   z-index: 100;
 }
 .range-controls .bar {
-  width: 248px;
+  width: 252px;
   height: 2px;
   background: var(--colors-white);
 }
 
 .range-controls .toggle {
   position: absolute;
-  top: -7px;
+  top: -9px;
   left: 0;
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 8px solid #ffffff;
+  border: 10px solid #ffffff;
   background-color: #ababab;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
 }
 .range-controls .toggle-min {
-  left: 18px;
+  left: 0px;
 }
 
 .range-controls .toggle-max {
-  left: 160px;
+  left: 252px;
 }
 
 form .infrastructure,
@@ -906,14 +946,90 @@ form .price {
   line-height: 21px;
   text-transform: uppercase;
 }
+form .infrastructure,
+form .houses-types {
+margin-bottom: 0;
+}
 
-form label {
+
+form .infrastructure-item {
   color: var(--colors-white);
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  margin-top: 25px;
+  padding-left: 39px;
+
+  position: relative;
+  display: block;
 }
+
+input + .infrastructure-item::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url(../img/checkbox-off.svg);
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked + .infrastructure-item::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url(../img/checkbox-on.svg);
+    width: 27px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+form .houses-item {
+  color: var(--colors-white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  padding-left: 43px;
+
+  position: relative;
+  display: block;
+}
+
+input + .houses-item::before {
+  content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url(../img/checkbox-off.svg);
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+input:checked + .houses-item::after {
+  content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url(../img/checkbox-on.svg);
+    width: 27px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
 
 .mountains-bg-small .show {
   color: var(--colors-white);
@@ -930,7 +1046,11 @@ form label {
 }
 input.min {
   background: transparent;
+  border: none;
+  width: 58px;
+  height: 21px;
 }
+
 input.min::placeholder {
   color: var(--colors-white);
   font-weight: normal;
@@ -941,6 +1061,10 @@ input.min::placeholder {
 }
 input.max {
   background: transparent;
+  border: none;
+  width: 83px;
+  height: 21px;
+      margin-left: 84px;
 }
 input.max::placeholder {
   color: var(--colors-white);
@@ -1004,8 +1128,9 @@ input.max::placeholder {
   margin-top: 5px;
 }
 
-.sorting-down svg {
-  fill: var(--colors-sorting-arrows-grey);
+
+.sorting-down-current svg {
+  fill: var(--colors-sorting-arrows-blue);
 }
 .sorting-down:hover svg {
   fill: var(--colors-black);
