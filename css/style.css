@@ -856,6 +856,7 @@ a.youtube {
 
 }
 .price-controls {
+
 border: 2px solid var(--colors-white);
 box-sizing: border-box;
 border-radius: 2px;
@@ -866,6 +867,19 @@ margin-right: 73px;
 padding-top: 5px;
 padding-left: 50px;
 
+  position: relative;
+  display: block;
+
+}
+.price-controls::before {
+content: "";
+top: 5px;
+left: 157px;
+ width: 2px;
+ height: 22px;
+ background-color: var(--colors-white);
+ position: absolute;
+ z-index: 30;
 }
 
 button.show {
