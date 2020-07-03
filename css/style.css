@@ -343,7 +343,7 @@ ul.white-bg {
 }
 
 .order-form {
-	display: flex;
+	display: fixed;
 	flex-direction: column;
 	position: absolute;
 	width: 568px;
@@ -355,6 +355,31 @@ ul.white-bg {
 	padding-top: 44px;
 	z-index: 2;
 	box-shadow: 0px 7px 15px var(--colors-box-shadow-grey);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 3.6s;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .order-form .adults-and-children {
