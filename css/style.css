@@ -343,14 +343,14 @@ ul.white-bg {
 }
 
 .order-form {
-	display: fixed;
+	display: flex;
 	flex-direction: column;
 	position: absolute;
 	width: 568px;
 	height: 395px;
 	background-color: var(--colors-white);
 	left: 50%;
-	transform: translateX(-50%);
+  transform: translateX(-50%);
 	padding: 55px;
 	padding-top: 44px;
 	z-index: 2;
@@ -367,18 +367,22 @@ ul.white-bg {
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
+		left: 30%;
   }
 
   70% {
     transform: translateY(30px);
+		left: 30%;
   }
 
   90% {
     transform: translateY(-10px);
+		left: 30%;
   }
 
   100% {
     transform: translateY(0);
+		left: 30%;
   }
 }
 

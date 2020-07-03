@@ -8,7 +8,7 @@
 	button.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	form.classList.toggle("visually-hidden");
-  form.classList.add("modal-show");
+  form.classList.toggle("modal-show");
   localStorage.setItem("adults", adults.value);
   localStorage.setItem("children", children.value);
 	});
