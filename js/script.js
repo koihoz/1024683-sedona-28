@@ -4,6 +4,7 @@
   var children = document.querySelector(".order-item-children");
   var dates = document.querySelector(".order-item-date");
 
+  form.classList.add("visually-hidden");
 
 	button.addEventListener("click", function (evt) {
 	evt.preventDefault();
@@ -13,9 +14,9 @@
   localStorage.setItem("children", children.value);
 	});
 
-
   form.addEventListener("submit", function (evt) {
-   if (!aduits.value || !children.value || !dates.value) {
+   if (!adults.value || !children.value || !dates.value) {
      evt.preventDefault();
+     form.classList.add("modal-error");
    }
  });

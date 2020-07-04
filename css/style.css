@@ -359,30 +359,43 @@ ul.white-bg {
 
 .modal-show {
   display: block;
-  animation: bounce 3.6s;
+  animation: bounce 0.6s;
 }
 
+.modal-error {
+  animation: shake 0.6s;
+}
 /* Animations */
 
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
-		left: 30%;
-  }
-
-  70% {
-    transform: translateY(30px);
-		left: 30%;
-  }
-
-  90% {
-    transform: translateY(-10px);
-		left: 30%;
+    transform: translateY(-395px);
   }
 
   100% {
     transform: translateY(0);
-		left: 30%;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
