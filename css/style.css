@@ -20,6 +20,7 @@
 	--colors-white-opacity-03: rgba(255, 255, 255, 0.3);
 	--colors-black-opacity-03: rgba(0, 0, 0, 0.3);
 	--colors-box-shadow-grey: rgba(0, 1, 1, 0.15);
+	--colors-box-shadow-grey-02: rgba(0, 1, 1, 0.2);
 	--colors-background: #374b56;
 	--colors-background-main: #f2f2f2;
 	--colors-grey-point: #ABABAB;
@@ -60,7 +61,7 @@ body {
 .container {
 	width: 1200px;
 	margin: 0 auto;
-	box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+	box-shadow: 0px 5px 15px var(--colors-box-shadow-grey-02);
 	background-color: var(--colors-white);
 }
 
@@ -223,7 +224,7 @@ body {
 	background-color: var(--colors-light-blue);
 }
 
-ul.white-bg {
+.white-bg {
 	background-color: var(--colors-white);
 }
 
@@ -636,7 +637,7 @@ ul.white-bg {
 	fill: var(--colors-light-blue);
 }
 
-input.order-item-data::placeholder {
+.order-item-data::placeholder {
 	color: var(--colors-black);
 	font-weight: bold;
 	font-size: 14px;
